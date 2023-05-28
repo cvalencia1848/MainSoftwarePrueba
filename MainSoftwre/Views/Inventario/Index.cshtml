@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MainSoftwre.Models.AutoresHasLibro>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Relaciones</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Autores)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LibrosIsbnNavigation)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Autores.NombreCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LibrosIsbnNavigation.Titulo)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

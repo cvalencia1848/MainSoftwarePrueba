@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#nullable disable
 
-#nullable disable
+using System.ComponentModel.DataAnnotations;
 
 namespace MainSoftwre.Models
 {
@@ -12,6 +11,7 @@ namespace MainSoftwre.Models
         public int LibrosIsbn { get; set; }
 
         public virtual Autore Autores { get; set; }
+        [Display(Name = "Libros")]
         public virtual Libro LibrosIsbnNavigation { get; set; }
     }
 }
